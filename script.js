@@ -133,7 +133,7 @@ function initContactForm() {
     // Build a mailto link as a graceful fallback
     const subject  = encodeURIComponent(`Portfolio Contact from ${name}`);
     const body     = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    const mailto   = `mailto:your@email.com?subject=${subject}&body=${body}`;
+    const mailto   = `mailto:dustriat@gmail.com?subject=${subject}&body=${body}`;
 
     // Try to open mail client
     window.location.href = mailto;
