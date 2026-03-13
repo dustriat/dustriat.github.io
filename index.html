@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — [Your Name]</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__initials">[YN]</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Work</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero__eyebrow">
+      <span class="hero__tag">Educator · Technologist · Analyst in Training</span>
+      <span class="hero__divider">—</span>
+      <span class="hero__location">Colorado, USA</span>
+    </div>
+    <h1 class="hero__headline">
+      <span class="hero__line hero__line--1">Teaching</span>
+      <span class="hero__line hero__line--2"><em>Technology.</em></span>
+      <span class="hero__line hero__line--3">Translating</span>
+      <span class="hero__line hero__line--4"><em>Data.</em></span>
+    </h1>
+    <p class="hero__sub">
+      Middle school technology educator with a background in IT support, inventory management, 
+      and retail tech services — currently expanding into data &amp; business analytics.
+    </p>
+    <div class="hero__cta">
+      <a href="#projects" class="btn btn--primary">View My Work</a>
+      <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none"><rect x="6.5" y="0.5" width="3" height="7" rx="1.5" fill="currentColor" opacity="0.4"/><path d="M8 14 L8 22 M5 19 L8 22 L11 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label">
+        <span class="section-number">01</span>
+        <span class="section-title">About</span>
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <h2 class="about__heading">More than a teacher.<br/><em>A translator.</em></h2>
+          <p>
+            I bridge the gap between complex technology and the people who need to use it. Whether it's 
+            helping a sixth grader understand how computers think, or guiding a customer through a tech 
+            support decision — my career has always been about making technology accessible.
+          </p>
+          <p>
+            With roots in IT support and retail tech services, I've developed a practical, people-first 
+            approach to technology. Now, I'm adding the language of data to my toolkit — pursuing certifications 
+            in <strong>Data Analytics</strong> and <strong>Business Analytics</strong> to open new ways 
+            to solve problems and tell stories with information.
+          </p>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__value">3+</span>
+              <span class="stat__label">Years in Education</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">5+</span>
+              <span class="stat__label">Years in Tech Roles</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value">2</span>
+              <span class="stat__label">Certifications In Progress</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__sidebar">
+          <div class="about__card">
+            <h3>Currently</h3>
+            <ul>
+              <li>📚 Teaching Technology, Middle School</li>
+              <li>📊 Pursuing Data Analytics Cert.</li>
+              <li>💼 Pursuing Business Analytics Cert.</li>
+            </ul>
+          </div>
+          <div class="about__card">
+            <h3>Background</h3>
+            <ul>
+              <li>🖥️ Technology Support Specialist</li>
+              <li>📦 Inventory Manager</li>
+              <li>🛍️ Service Advisor, Retail Tech</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section section--alt" id="skills">
+    <div class="container">
+      <div class="section-label">
+        <span class="section-number">02</span>
+        <span class="section-title">Skills</span>
+      </div>
+      <h2 class="skills__heading">What I bring<br/><em>to the table.</em></h2>
+      <div class="skills__grid">
+
+        <div class="skill-card">
+          <div class="skill-card__icon">🎓</div>
+          <h3>Education & Instruction</h3>
+          <p>Curriculum design, classroom management, differentiated instruction, and translating technical concepts for all skill levels.</p>
+          <div class="skill-card__tags">
+            <span>Curriculum Design</span>
+            <span>K–12 Technology</span>
+            <span>Differentiated Learning</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">🛠️</div>
+          <h3>IT Support & Systems</h3>
+          <p>Hardware troubleshooting, ticketing systems, end-user support, device management, and inventory tracking at scale.</p>
+          <div class="skill-card__tags">
+            <span>Help Desk</span>
+            <span>Device Management</span>
+            <span>Troubleshooting</span>
+            <span>Inventory Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">📊</div>
+          <h3>Data & Analytics</h3>
+          <p>Currently building proficiency in data analysis workflows, visualization, and business intelligence tools.</p>
+          <div class="skill-card__tags">
+            <span>Data Analytics</span>
+            <span>Business Analytics</span>
+            <span>Excel / Spreadsheets</span>
+            <span>Data Visualization</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">🤝</div>
+          <h3>Communication & Sales</h3>
+          <p>Experience advising customers on technology decisions, building trust, and translating technical options into clear value.</p>
+          <div class="skill-card__tags">
+            <span>Client Communication</span>
+            <span>Service Advisory</span>
+            <span>Technical Writing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label">
+        <span class="section-number">03</span>
+        <span class="section-title">Work</span>
+      </div>
+      <h2 class="projects__heading">Selected<br/><em>projects & roles.</em></h2>
+      <div class="projects__list">
+
+        <article class="project-item" data-index="01">
+          <div class="project-item__meta">
+            <span class="project-item__type">Education</span>
+            <span class="project-item__year">Current</span>
+          </div>
+          <div class="project-item__content">
+            <h3>Middle School Technology Curriculum</h3>
+            <p>
+              Designed and delivered hands-on technology curriculum for 6th–8th grade students. 
+              Focus on digital literacy, computational thinking, and responsible technology use. 
+              Adapted lessons for diverse learning styles and integrated project-based learning.
+            </p>
+            <div class="project-item__tags">
+              <span>Curriculum Design</span>
+              <span>Digital Literacy</span>
+              <span>Project-Based Learning</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item" data-index="02">
+          <div class="project-item__meta">
+            <span class="project-item__type">Analytics</span>
+            <span class="project-item__year">In Progress</span>
+          </div>
+          <div class="project-item__content">
+            <h3>Data Analytics Certification Projects</h3>
+            <p>
+              Completing hands-on projects as part of a Data Analytics certification track. 
+              Working with real-world datasets to practice cleaning, analysis, and visualization — 
+              building a foundation for data-informed decision making.
+            </p>
+            <div class="project-item__tags">
+              <span>Data Cleaning</span>
+              <span>Visualization</span>
+              <span>Analysis</span>
+            </div>
+          </div>
+          <!-- Uncomment and add link when ready:
+          <a href="#" class="project-item__link" target="_blank" rel="noopener">View Project →</a>
+          -->
+        </article>
+
+        <article class="project-item" data-index="03">
+          <div class="project-item__meta">
+            <span class="project-item__type">IT Support</span>
+            <span class="project-item__year">Previous</span>
+          </div>
+          <div class="project-item__content">
+            <h3>Technology Support Specialist</h3>
+            <p>
+              Provided frontline technical support across hardware, software, and network issues. 
+              Managed ticketing queues, documented solutions, and trained end users — reducing 
+              repeat tickets through better user education.
+            </p>
+            <div class="project-item__tags">
+              <span>Help Desk</span>
+              <span>End-User Training</span>
+              <span>Documentation</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item" data-index="04">
+          <div class="project-item__meta">
+            <span class="project-item__type">Operations</span>
+            <span class="project-item__year">Previous</span>
+          </div>
+          <div class="project-item__content">
+            <h3>Inventory Management & Service Advisory</h3>
+            <p>
+              Oversaw inventory systems and managed stock accuracy for technology products. 
+              As a service advisor, consulted customers on technology needs, translating 
+              complex options into clear recommendations that built trust and drove satisfaction.
+            </p>
+            <div class="project-item__tags">
+              <span>Inventory Systems</span>
+              <span>Client Advisory</span>
+              <span>Retail Tech</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section section--alt" id="contact">
+    <div class="container">
+      <div class="section-label">
+        <span class="section-number">04</span>
+        <span class="section-title">Contact</span>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__left">
+          <h2 class="contact__heading">Let's<br/><em>connect.</em></h2>
+          <p>
+            Whether you're interested in collaboration, have a question about my work, 
+            or just want to talk technology — I'd love to hear from you.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:your@email.com" class="contact__link">
+              <span class="contact__link-icon">✉</span>
+              <span>your@email.com</span>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" class="contact__link" target="_blank" rel="noopener">
+              <span class="contact__link-icon">in</span>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/yourusername" class="contact__link" target="_blank" rel="noopener">
+              <span class="contact__link-icon">⌥</span>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__name">[Your Name] — Portfolio</span>
+        <span class="footer__copy">Built with HTML, CSS & JS · Hosted on GitHub Pages</span>
+        <a href="#home" class="footer__top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
