@@ -17,8 +17,9 @@
     </div>
     <ul class="nav__links">
       <li><a href="index.html#home">Contact</a></li>
+      <li><a href="index.html#about">About Me</a></li>
       <li><a href="index.html#projects">Projects</a></li>
-      <li><a href="index.html#certs">Credentials</a></li>
+      <li><a href="index.html#creds">Credentials</a></li>
       <li><a href="index.html#career">Career</a></li>
       <li><a href="index.html#skills">Skills</a></li>
     </ul>
@@ -29,9 +30,10 @@
 
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="index.html#home"     class="mobile-link">About Me</a></li>
+      <li><a href="index.html#home"     class="mobile-link">Contact</a></li>
+      <li><a href="index.html#about"    class="mobile-link">About Me</a></li>
       <li><a href="index.html#projects" class="mobile-link">Projects</a></li>
-      <li><a href="index.html#certs"    class="mobile-link">Certifications</a></li>
+      <li><a href="index.html#certs"    class="mobile-link">Credentials</a></li>
       <li><a href="index.html#career"   class="mobile-link">Career</a></li>
       <li><a href="index.html#skills"   class="mobile-link">Skills</a></li>
     </ul>
@@ -39,22 +41,20 @@
 
   <header class="subpage-hero">
     <div class="container">
-      <a href="index.html#projects" class="subpage-back-link">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Back to Projects
-      </a>
+      <a href="index.html#projects" class="btn btn--primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Back to Projects</a>
       <div class="subpage-hero__eyebrow">
-        <span class="project-card__category">This Site</span>
+        <span class="project-card__category--data">Analytics</span>
+        <span class="project-card__category--tech">Technology</span>
+        <span class="project-card__category--design">Design</span>
         <span class="subpage-hero__status">
-          <span class="status-dot status-dot--active"></span>
-          Live &mdash; github.com/dustriat
+          <span class="status-dot status-dot--progress"></span>
+          In Progress &mdash; est. March 2026
         </span>
       </div>
-      <h1 class="subpage-hero__title">Personal Portfolio<br/><em>Website</em></h1>
+      <h1 class="subpage-hero__title">Google Data Analytics<br/><em>Capstone Project</em></h1>
       <p class="subpage-hero__sub">
-        Built entirely from scratch using HTML, CSS, and vanilla JavaScript — no frameworks, no templates.
-        Designed to reflect professional identity, communicate career growth, and serve as a living
-        document updated alongside skills and certifications. Hosted for free on GitHub Pages.
+        Website under development. Check back soon!
       </p>
     </div>
   </header>
@@ -67,63 +67,7 @@
 
           <section class="subpage-section">
             <h2 class="subpage-section__heading">Project Overview</h2>
-            <p>This portfolio site is itself a project — built to demonstrate initiative, technical capability, and design sense. Rather than using a template or site builder, every section was coded by hand using semantic HTML5, custom CSS with a design system of variables and utilities, and vanilla JavaScript for interactions and animations.</p>
-            <p>The site is designed to grow alongside a career in transition: sections for active projects, in-progress certifications, a full career timeline, and a skills system with proficiency indicators. Everything is easy to update as new work and credentials are added.</p>
-          </section>
-
-          <section class="subpage-section">
-            <h2 class="subpage-section__heading">What Was Built</h2>
-            <div class="subpage-steps">
-              <div class="subpage-step">
-                <span class="subpage-step__num">01</span>
-                <div>
-                  <h3>Design System &amp; Color Palette</h3>
-                  <p>A split-complementary palette (#66B8FF, #666BFF, #66FFFA, #FF666B, #FFFA66) implemented as CSS custom properties with consistent typography using Barlow, DM Sans, and DM Mono.</p>
-                </div>
-              </div>
-              <div class="subpage-step">
-                <span class="subpage-step__num">02</span>
-                <div>
-                  <h3>Multi-Section Single Page</h3>
-                  <p>Hero with headshot and contact strip, contact form, projects, certifications, career timeline, and skills — all on one scrollable page with smooth anchor navigation.</p>
-                </div>
-              </div>
-              <div class="subpage-step">
-                <span class="subpage-step__num">03</span>
-                <div>
-                  <h3>Project Subpages</h3>
-                  <p>Four linked project detail pages (including this one) sharing the same stylesheet and script for visual consistency across the site.</p>
-                </div>
-              </div>
-              <div class="subpage-step">
-                <span class="subpage-step__num">04</span>
-                <div>
-                  <h3>JavaScript Interactions</h3>
-                  <p>Scroll-triggered reveal animations, sticky nav with blur effect, active link highlighting, mobile hamburger menu, and a mailto-powered contact form.</p>
-                </div>
-              </div>
-              <div class="subpage-step">
-                <span class="subpage-step__num">05</span>
-                <div>
-                  <h3>GitHub Pages Deployment</h3>
-                  <p>All files committed to a public GitHub repository and deployed via GitHub Pages — zero hosting cost, version-controlled, and publicly accessible.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="subpage-section">
-            <h2 class="subpage-section__heading">Live Links</h2>
-            <div class="subpage-links">
-              <a href="https://github.com/dustriat" target="_blank" rel="noopener" class="subpage-link-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                <div><span class="subpage-link-item__label">GitHub Repository</span><span class="subpage-link-item__note">github.com/dustriat</span></div>
-              </a>
-              <a href="index.html" class="subpage-link-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
-                <div><span class="subpage-link-item__label">Live Portfolio Site</span><span class="subpage-link-item__note">You're looking at it</span></div>
-              </a>
-            </div>
+            <p>Website under development. Check back soon!</p>
           </section>
 
         </div>
@@ -133,31 +77,23 @@
             <h3>Project Details</h3>
             <dl class="subpage-detail-list">
               <dt>Status</dt>
-              <dd><span class="status-dot status-dot--active"></span>&nbsp;Live</dd>
-              <dt>Hosting</dt>
+              <dd><span class="status-dot status-dot--progress"></span>&nbsp;In Progress</dd>
+              <dt>Organization</dt>
               <dd>GitHub Pages</dd>
-              <dt>Repository</dt>
-              <dd>github.com/dustriat</dd>
-              <dt>Stack</dt>
-              <dd>HTML, CSS, JavaScript</dd>
-              <dt>Frameworks</dt>
-              <dd>None &mdash; built from scratch</dd>
+              <dt>Client</dt>
+              <dd>Personal</dd>
+              <dt>Achievement</dt>
+              <dd>Web Design Demonstration</dd>
+              <dt>Date(s)</dt>
+              <dd>March 2026</dd>
             </dl>
           </div>
           <div class="subpage-sidebar__card">
             <h3>Skills Applied</h3>
             <div class="subpage-sidebar__tags">
-              <span class="tag tag--tech">HTML5</span>
-              <span class="tag tag--tech">CSS Custom Properties</span>
-              <span class="tag tag--tech">Vanilla JavaScript</span>
-              <span class="tag tag--tech">GitHub Pages</span>
-              <span class="tag tag--tech">Responsive Design</span>
-              <span class="tag tag--soft">Communication</span>
-              <span class="tag tag--soft">Attention to Detail</span>
-              <span class="tag tag--soft">Self-Motivation</span>
+              
             </div>
           </div>
-          <a href="https://github.com/dustriat" target="_blank" rel="noopener" class="btn btn--primary btn--full">View on GitHub</a>
         </aside>
 
       </div>
