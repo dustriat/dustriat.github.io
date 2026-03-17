@@ -285,7 +285,7 @@ em {
 /* ============================
    MAIN — full header page
    ============================ */
-.main {
+.hero {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -298,14 +298,14 @@ em {
 }
 
 /* ── Top row: headline + photo ── */
-.main__inner {
+.hero__inner {
   display: grid;
   grid-template-columns: 1fr 340px;
   gap: 4rem;
   align-items: center;
 }
 
-.main__eyebrow {
+.hero__eyebrow {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -315,7 +315,7 @@ em {
   animation: fadeUp 0.8s 0.2s forwards;
 }
 
-.main__tag {
+.hero__tag {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
@@ -323,9 +323,9 @@ em {
   text-transform: uppercase;
 }
 
-.main__divider { color: var(--blue); font-size: 0.875rem; }
+.hero__divider { color: var(--blue); font-size: 0.875rem; }
 
-.main__headline {
+.hero__headline {
   display: flex;
   flex-direction: column;
   font-family: var(--font-display);
@@ -337,13 +337,13 @@ em {
   margin-bottom: 1.75rem;
 }
 
-.main__line          { opacity: 0; display: block; }
-.main__line--1       { animation: fadeUp 0.8s 0.35s forwards; }
-.main__line--2       { animation: fadeUp 0.8s 0.5s forwards;  color: var(--color-primary-dark); font-style: italic; margin-left: clamp(0.5rem, 10vw, 10rem); }
-.main__line--3       { animation: fadeUp 0.8s 0.65s forwards; text-transform: none; font-size: 0.6em; }
-.main__line--4       { animation: fadeUp 0.8s 0.8s forwards;  color: var(--color-primary-dark); font-style: italic; text-transform: none; font-size: 0.6em; margin-left: clamp(0.5rem, 15vw, 15rem); }
+.hero__line          { opacity: 0; display: block; }
+.hero__line--1       { animation: fadeUp 0.8s 0.35s forwards; }
+.hero__line--2       { animation: fadeUp 0.8s 0.5s forwards;  color: var(--color-primary-dark); font-style: italic; margin-left: clamp(0.5rem, 10vw, 10rem); }
+.hero__line--3       { animation: fadeUp 0.8s 0.65s forwards; text-transform: none; font-size: 0.6em; }
+.hero__line--4       { animation: fadeUp 0.8s 0.8s forwards;  color: var(--color-primary-dark); font-style: italic; text-transform: none; font-size: 0.6em; margin-left: clamp(0.5rem, 15vw, 15rem); }
 
-.main__sub {
+.hero__sub {
   max-width: 50ch;
   font-size: 1rem;
   font-weight: 400;
@@ -354,7 +354,7 @@ em {
   animation: fadeUp 0.8s 0.95s forwards;
 }
 
-.main__cta {
+.hero__cta {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -363,13 +363,13 @@ em {
 }
 
 /* ── Photo column ── */
-.main__photo-wrap {
+.hero__photo-wrap {
   position: relative;
   opacity: 0;
   animation: fadeUp 0.9s 0.55s forwards;
 }
 
-.main__photo-frame {
+.hero__photo-frame {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -382,7 +382,7 @@ em {
     0 4px 16px rgba(0,0,0,0.07);
 }
 
-.main__photo {
+.hero__photo {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center top;
@@ -390,9 +390,9 @@ em {
   transition: transform 0.55s ease;
 }
 
-.main__photo-frame:hover .main__photo { transform: scale(1.03); }
+.hero__photo-frame:hover .hero__photo { transform: scale(1.03); }
 
-.main__photo-badge {
+.hero__photo-badge {
   position: absolute;
   bottom: -0.875rem;
   left: -0.875rem;
@@ -406,7 +406,7 @@ em {
   gap: 0.1rem;
 }
 
-.main__badge-line {
+.hero__badge-line {
   font-family: var(--font-mono);
   font-size: 0.62rem;
   text-transform: uppercase;
@@ -415,7 +415,7 @@ em {
   display: block;
 }
 
-.main__badge-line--bold {
+.hero__badge-line--bold {
   font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 800;
@@ -425,7 +425,7 @@ em {
 }
 
 /* ── Main contact strip (below main__inner) ── */
-.main__contact-strip {
+.hero__contact-strip {
   display: flex;
   padding-top: 2rem;
   border-top: 1px solid var(--color-border);
@@ -433,7 +433,7 @@ em {
   animation: fadeUp 0.8s 1.2s forwards;
 }
 
-.main__contact-item {
+.hero__contact-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -445,13 +445,13 @@ em {
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
-.main__contact-item:hover {
+.hero__contact-item:hover {
   border-color: var(--blue);
   box-shadow: 0 4px 16px rgba(102, 184, 255, 0.18);
   transform: translateY(-2px);
 }
 
-.main__contact-icon {
+.hero__contact-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -462,16 +462,16 @@ em {
   flex-shrink: 0;
 }
 
-.main__contact-icon svg { width: 16px; height: 16px; }
+.hero__contact-icon svg { width: 16px; height: 16px; }
 
-.main__contact-text {
+.hero__contact-text {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
   min-width: 0;
 }
 
-.main__contact-label {
+.hero__contact-label {
   font-family: var(--font-mono);
   font-size: 0.62rem;
   text-transform: uppercase;
@@ -479,7 +479,7 @@ em {
   color: var(--color-ink-faint);
 }
 
-.main__contact-value {
+.hero__contact-value {
   font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 500;
@@ -489,7 +489,7 @@ em {
   text-overflow: ellipsis;
 }
 
-.main__scroll-hint {
+.hero__scroll-hint {
   display: none; /* hidden — contact strip replaces the scroll cue */
 }
 
@@ -1444,18 +1444,18 @@ em {
    RESPONSIVE
    ============================ */
 @media (max-width: 1000px) {
-  .main__contact-strip { grid-template-columns: repeat(2, 1fr); }
+  .hero__contact-strip { grid-template-columns: repeat(2, 1fr); }
   .skills__grid        { grid-template-columns: 1fr 1fr; }
   .projects__cards     { grid-template-columns: 1fr 1fr; }
   .certs__grid         { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 860px) {
-  .main__inner {
+  .hero__inner {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  .main__photo-wrap { max-width: 260px; margin: 0 auto; }
+  .hero__photo-wrap { max-width: 260px; margin: 0 auto; }
 
   .career__grid {
     grid-template-columns: 1fr;
@@ -1482,9 +1482,9 @@ em {
   .nav__hamburger{ display: flex; }
   .mobile-menu   { display: block; }
 
-  .main__photo-wrap    { max-width: 200px; }
-  .main__photo-badge   { left: -0.5rem; bottom: -0.6rem; }
-  .main__contact-strip { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .hero__photo-wrap    { max-width: 200px; }
+  .hero__photo-badge   { left: -0.5rem; bottom: -0.6rem; }
+  .hero__contact-strip { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 
   .skills__grid    { grid-template-columns: 1fr; }
   .projects__cards { grid-template-columns: 1fr; }
@@ -1600,7 +1600,7 @@ em {
   color: var(--color-ink);
 }
 
-.subpage-main p {
+.subpage-hero p {
   font-size: 0.95rem;
   color: var(--color-ink-muted);
   line-height: 1.78;
