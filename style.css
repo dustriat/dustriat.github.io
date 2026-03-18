@@ -185,7 +185,6 @@ em {
   align-items: center;
   justify-content: center;
   width: 50px; height: 50px;
-  padding: 0;
   background: linear-gradient(135deg, #eef5ff, #e6f0ff);
   border: 1px solid rgba(102,184,255,0.3);
   border-radius: var(--radius-lg);
@@ -756,16 +755,27 @@ em {
   letter-spacing: 0.04em;
 }
 
-.project-card__status {
+.project-card__meta {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-light);
+  margin-top: 0.25rem;
+}
+
+.project-card__status {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--color-ink-faint);
-  letter-spacing: 0.06em;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--color-border-light);
+  letter-spacing: 0.07em;
+}
+
+.project-card__eta {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+  color: var(--color-ink-faint);
 }
 
 /* ── Status dots (shared across all sections) ── */
@@ -778,23 +788,28 @@ em {
 
 .status-dot--active {
   background: var(--cyan);
-  box-shadow: 0 0 0 2px rgba(62,207,142,0.5);
+  --pulse-color: rgba(62,207,142,0.3);
+  --pulse-color-fade: rgba(62,207,142,0.1);
+  animation: pulse-dot 2s infinite;
 }
 
 .status-dot--progress {
   background: var(--yellow);
-  box-shadow: 0 0 0 2px rgba(255,250,102,0.5);
+  --pulse-color: rgba(255,250,102,0.3);
+  --pulse-color-fade: rgba(255,250,102,0.1);
   animation: pulse-dot 2s infinite;
 }
 
 .status-dot--inactive {
   background: var(--coral);
-  box-shadow: 0 0 0 2px rgba(255,102,107,0.5);
+  --pulse-color: rgba(255,102,107,0.3);
+  --pulse-color-fade: rgba(255,102,107,0.1);
+  animation: pulse-dot 2s infinite;
 }
 
 @keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 0 2px rgba(255,250,102,0.3); }
-  50%       { box-shadow: 0 0 0 5px rgba(255,250,102,0.1); }
+  0%, 100% { box-shadow: 0 0 0 2px var(--pulse-color); }
+  50%       { box-shadow: 0 0 0 5px var(--pulse-color-fade); }
 }
 
 /* ============================
@@ -820,7 +835,8 @@ em {
 .creds__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .cred-card {
@@ -909,15 +925,11 @@ em {
 }
 
 .cred-card__status {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
   font-family: var(--font-mono);
   font-size: 0.65rem;
+  color: var(--color-ink-faint);
   letter-spacing: 0.07em;
 }
-
-.cred-card__status--progress { color: #b08800; }
 
 .cred-card__eta {
   font-family: var(--font-mono);
@@ -1570,7 +1582,10 @@ em {
   align-items: start;
 }
 
-.subpage-step:first-child { border-top: 1px solid var(--color-border-light); }
+.subpage-step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
 
 .subpage-step__num {
   font-family: var(--font-mono);
