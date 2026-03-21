@@ -50,30 +50,78 @@ document.addEventListener('keydown', e => {
 
 // ── Scroll reveal ────────────────────────────────────────────────
 function initReveal() {
+  // Each entry: [selector, extraClass]
+  // extraClass 'reveal-wrap--sm' uses shorter translateY travel
   const revealTargets = [
-    '.contact__left',
-    '.contact__form',
-    '.about',
-    '.projects__intro',
-    '.project-card',
-    '.cred-card',
-    '.career__stats',
-    '.career-item',
-    '.skill-card',
+    ['.contact__left',          ''],
+    ['.contact__form',          ''],
+    ['.about',                  ''],
+    ['.projects__intro',        ''],
+    ['.project-card',           ''],
+    ['.cred-card',              ''],
+    ['.career__stats',          ''],
+    ['.career-item',            ''],
+    ['.skill-card',             ''],
+    ['.subpage-section',        ''],
+    ['.subpage-sidebar__card',  ''],
+    ['.subpage-step',           'reveal-wrap--sm'],
   ];
 
-  const elements = document.querySelectorAll(revealTargets.join(','));
+  revealTargets.forEach(([selector, extraClass]) => {
+    document.querySelectorAll(selector).forEach(el => {
+      // Skip if already wrapped (guard for re-runs)
+      if (el.parentElement && el.parentElement.classList.contains('reveal-wrap')) return;
 
-  elements.forEach((el, i) => {
-    el.classList.add('reveal');
-    // Stagger children of same parent grid
-    if (el.closest('.skills__grid') || el.closest('.projects__cards') || el.closest('.certs__grid')) {
-      const siblings = Array.from(el.parentElement.children);
-      const idx = siblings.indexOf(el);
-      el.style.transitionDelay = `${idx * 0.1}s`;
-    }
+      // Create wrapper, transfer el's position in DOM
+      const wrap = document.createElement('div');
+      wrap.classList.add('reveal-wrap');
+      if (extraClass) wrap.classList.add(extraClass);
+
+      // Compute stagger delay before wrapping
+      let delay = 0;
+      const parent = el.parentElement;
+
+      if (parent) {
+        // Grid stagger: projects, skills, creds
+        if (
+          parent.classList.contains('projects__cards') ||
+          parent.classList.contains('skills__grid') ||
+          parent.classList.contains('creds__grid')
+        ) {
+          const idx = Array.from(parent.children).indexOf(el);
+          delay = idx * 0.1;
+        }
+        // Subpage step stagger
+        if (el.classList.contains('subpage-step')) {
+          const idx = Array.from(parent.children).indexOf(el);
+          delay = idx * 0.08;
+        }
+        // Subpage section stagger
+        if (el.classList.contains('subpage-section')) {
+          const sections = Array.from(parent.querySelectorAll('.subpage-section'));
+          delay = sections.indexOf(el) * 0.1;
+        }
+        // Sidebar card stagger
+        if (el.classList.contains('subpage-sidebar__card')) {
+          const cards = Array.from(parent.querySelectorAll('.subpage-sidebar__card'));
+          delay = cards.indexOf(el) * 0.12;
+        }
+        // Career item stagger
+        if (el.classList.contains('career-item')) {
+          const items = Array.from(parent.querySelectorAll('.career-item'));
+          delay = items.indexOf(el) * 0.1;
+        }
+      }
+
+      wrap.style.transitionDelay = delay > 0 ? `${delay}s` : '';
+
+      // Wrap the element
+      el.parentNode.insertBefore(wrap, el);
+      wrap.appendChild(el);
+    });
   });
 
+  // Observe all wrappers
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
@@ -83,10 +131,10 @@ function initReveal() {
         }
       });
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
   );
 
-  elements.forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal-wrap').forEach(wrap => observer.observe(wrap));
 }
 
 // ── Active nav link on scroll ────────────────────────────────────
