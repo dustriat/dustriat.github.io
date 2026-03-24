@@ -51,20 +51,23 @@ document.addEventListener('keydown', e => {
 // ── Scroll reveal ────────────────────────────────────────────────
 function initReveal() {
   const revealTargets = [
-    '.about__grid',
-    '.about__stats',
-    '.skill-card',
-    '.project-item',
     '.contact__left',
     '.contact__form',
+    '.about',
+    '.projects__intro',
+    '.project-card',
+    '.cred-card',
+    '.career__stats',
+    '.career-item',
+    '.skill-card',
   ];
 
   const elements = document.querySelectorAll(revealTargets.join(','));
 
   elements.forEach((el, i) => {
     el.classList.add('reveal');
-    // Stagger children of same parent
-    if (el.closest('.skills__grid') || el.closest('.projects__list')) {
+    // Stagger children of same parent grid
+    if (el.closest('.skills__grid') || el.closest('.projects__cards') || el.closest('.certs__grid')) {
       const siblings = Array.from(el.parentElement.children);
       const idx = siblings.indexOf(el);
       el.style.transitionDelay = `${idx * 0.1}s`;
