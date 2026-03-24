@@ -50,91 +50,71 @@ document.addEventListener('keydown', e => {
 
 // ── Scroll reveal ────────────────────────────────────────────────
 function initReveal() {
-  // Each entry: [selector, extraClass]
-  // extraClass 'reveal-wrap--sm' uses shorter translateY travel
   const revealTargets = [
-    ['.contact__left',          ''],
-    ['.contact__form',          ''],
-    ['.about',                  ''],
-    ['.projects__intro',        ''],
-    ['.project-card',           ''],
-    ['.cred-card',              ''],
-    ['.career__stats',          ''],
-    ['.career-item',            ''],
-    ['.skill-card',             ''],
-    ['.subpage-section',        ''],
-    ['.subpage-sidebar__card',  ''],
-    ['.subpage-step',           'reveal-wrap--sm'],
+    '.contact__left',
+    '.contact__form',
+    '.about',
+    '.projects__intro',
+    '.project-card',
+    '.cred-card',
+    '.career__stats',
+    '.career-item',
+    '.skill-card',
+    // subpage targets
+    '.subpage-section',
+    '.subpage-sidebar__card',
+    '.subpage-step',
   ];
 
-  revealTargets.forEach(([selector, extraClass]) => {
-    document.querySelectorAll(selector).forEach(el => {
-      // Skip if already wrapped (guard for re-runs)
-      if (el.parentElement && el.parentElement.classList.contains('reveal-wrap')) return;
+  const elements = document.querySelectorAll(revealTargets.join(','));
 
-      // Create wrapper, transfer el's position in DOM
-      const wrap = document.createElement('div');
-      wrap.classList.add('reveal-wrap');
-      if (extraClass) wrap.classList.add(extraClass);
+  elements.forEach(el => {
+    el.classList.add('reveal');
 
-      // Compute stagger delay before wrapping
-      let delay = 0;
-      const parent = el.parentElement;
-
-      if (parent) {
-        // Grid stagger: projects, skills, creds
-        if (
-          parent.classList.contains('projects__cards') ||
-          parent.classList.contains('skills__grid') ||
-          parent.classList.contains('creds__grid')
-        ) {
-          const idx = Array.from(parent.children).indexOf(el);
-          delay = idx * 0.1;
-        }
-        // Subpage step stagger
-        if (el.classList.contains('subpage-step')) {
-          const idx = Array.from(parent.children).indexOf(el);
-          delay = idx * 0.08;
-        }
-        // Subpage section stagger
-        if (el.classList.contains('subpage-section')) {
-          const sections = Array.from(parent.querySelectorAll('.subpage-section'));
-          delay = sections.indexOf(el) * 0.1;
-        }
-        // Sidebar card stagger
-        if (el.classList.contains('subpage-sidebar__card')) {
-          const cards = Array.from(parent.querySelectorAll('.subpage-sidebar__card'));
-          delay = cards.indexOf(el) * 0.12;
-        }
-        // Career item stagger
-        if (el.classList.contains('career-item')) {
-          const items = Array.from(parent.querySelectorAll('.career-item'));
-          delay = items.indexOf(el) * 0.1;
-        }
-      }
-
-      wrap.style.transitionDelay = delay > 0 ? `${delay}s` : '';
-
-      // Wrap the element
-      el.parentNode.insertBefore(wrap, el);
-      wrap.appendChild(el);
-    });
+    // Stagger grid children (index page cards)
+    if (el.closest('.skills__grid') || el.closest('.projects__cards') || el.closest('.certs__grid')) {
+      const siblings = Array.from(el.parentElement.children);
+      const idx = siblings.indexOf(el);
+      el.dataset.revealDelay = idx * 0.1;
+    }
+    // Stagger subpage steps within their container
+    if (el.classList.contains('subpage-step')) {
+      const siblings = Array.from(el.parentElement.children);
+      const idx = siblings.indexOf(el);
+      el.dataset.revealDelay = idx * 0.08;
+    }
+    // Stagger subpage sections
+    if (el.classList.contains('subpage-section')) {
+      const siblings = Array.from(el.parentElement.querySelectorAll('.subpage-section'));
+      const idx = Array.from(siblings).indexOf(el);
+      el.dataset.revealDelay = idx * 0.1;
+    }
+    // Stagger sidebar cards
+    if (el.classList.contains('subpage-sidebar__card')) {
+      const siblings = Array.from(el.parentElement.querySelectorAll('.subpage-sidebar__card'));
+      const idx = Array.from(siblings).indexOf(el);
+      el.dataset.revealDelay = idx * 0.12;
+    }
   });
 
-  // Observe all wrappers
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          const el = entry.target;
+          const delay = el.dataset.revealDelay || 0;
+          // Apply animation-delay at the moment the class is added,
+          // so it only affects the entrance animation, not hover transitions.
+          el.style.animationDelay = `${delay}s`;
+          el.classList.add('visible');
+          observer.unobserve(el);
         }
       });
     },
     { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
   );
 
-  document.querySelectorAll('.reveal-wrap').forEach(wrap => observer.observe(wrap));
+  elements.forEach(el => observer.observe(el));
 }
 
 // ── Active nav link on scroll ────────────────────────────────────
