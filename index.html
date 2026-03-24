@@ -14,12 +14,13 @@
   <!-- ═══ NAV ═══ -->
   <nav class="nav" id="nav">
     <div class="nav__logo">
-      <span class="nav__initials">DR</span>
+      <a href="index.html"><span class="nav__initials">DR</span></a>
     </div>
     <ul class="nav__links">
-      <li><a href="#home">About Me</a></li>
+      <li><a href="#home">Contact</a></li>
+      <li><a href="#about">About Me</a></li>      
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#certs">Credentials</a></li>
       <li><a href="#career">Career</a></li>
       <li><a href="#skills">Skills</a></li>
     </ul>
@@ -31,7 +32,8 @@
   <!-- ═══ MOBILE MENU ═══ -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="#home"     class="mobile-link">Home</a></li>
+      <li><a href="#home"     class="mobile-link">Contact</a></li>
+      <li><a href="#about"     class="mobile-link">About Me</a></li>
       <li><a href="#projects" class="mobile-link">Projects</a></li>
       <li><a href="#certs"    class="mobile-link">Certifications</a></li>
       <li><a href="#career"   class="mobile-link">Career</a></li>
@@ -47,7 +49,7 @@
         <div class="main__eyebrow">
           <span class="main__tag">Analytics</span>
           <span class="main__divider"> · </span>
-          <span class="main__tag">Education</span>
+          <span class="main__tag">Design</span>
           <span class="main__divider"> · </span>
           <span class="main__tag">Technology</span>
           <span class="main__divider"> · </span>
@@ -60,7 +62,7 @@
           <span class="main__line main__line--4">Specialist</span>
         </h1>
         <p class="main__sub">
-          As a technology and IT professional with over 10 years of experience, I excel at making complex, innovative ideas accessible to everyone. Currently I am expanding my skills in data analytics to help your next big endeavor succeed.
+          As a technology and IT professional with over 10 years of experience, I excel at making complex, innovative ideas accessible to everyone. Currently I am expanding my skills in data analytics and UX design to strengthen business decisions.
         </p>
       </div>
 
@@ -131,8 +133,25 @@
 
   </header>
 
+<!-- ═══ ABOUT ME ═══ -->
+  <section class="about section section--alt" id="about">
+    <div class="container">
+      <div class="section-label">
+        <span class="section-number">01</span>
+        <span class="section-title">About Me</span>
+      </div>
+      <h2 class="career__heading">Introduction &amp;<br/><em>Values</em></h2>
+      <p>
+        I've built my career around one idea: technology only works when people understand it. Whether I'm leading a classroom of sixth graders through a coding project, resolving IT tickets for 800+ users, or advising a customer — my focus has always been clear communication and practical problem-solving.
+      </p>
+      <p>
+        At Cherry Creek School District, I design and teach courses in Computer Science, Engineering, Video Production, and Journalism. I'm also completing the <strong>Google Data Analytics Professional Certificate</strong> and <strong>Data Scientist: Analytics</strong> through Codecademy, bringing SQL, Python, Tableau, and data storytelling into my practice.
+      </p>
+    </div>
+  </section>
+
   <!-- ═══ PROJECTS ═══ -->
-  <section class="projects section section--alt" id="projects">
+  <section class="projects section" id="projects">
     <div class="container">
       <div class="section-label">
         <span class="section-number">01</span>
@@ -141,102 +160,92 @@
 
       <!-- Introductory text above the cards -->
       <div class="projects__intro">
-        <h2 class="projects__heading">More than technology —<br/><em>Opportunity</em></h2>
+        <h2 class="projects__heading">Portfolio &amp;<br/><em>Showcases</em></h2>
         <p>
-          I've built my career around one idea: technology only works when people understand it.
-          Whether I'm leading a classroom of sixth graders through a coding project, resolving
-          IT tickets for 800+ users, or advising a customer — my focus has always been clear
-          communication and practical problem-solving.
-        </p>
-        <p>
-          At Infinity Middle School in the Cherry Creek School District, I design and teach
-          courses in Computer Science, Engineering, Video Production, and Journalism. I'm also
-          completing the <strong>Google Data Analytics Professional Certificate</strong> and
-          <strong>Data Scientist: Analytics</strong> through Codecademy, bringing SQL, Python,
-          Tableau, and data storytelling into my practice.
+          Write something here about what these projects mean and how they exemplify skills that I offer.
         </p>
       </div>
 
       <!-- Project link cards -->
       <div class="projects__cards">
 
-        <a href="#" class="project-card project-card--placeholder" target="_blank" rel="noopener" aria-label="Coming soon">
+        <a href="project.html" class="project-card" aria-label="Google Data Analytics Capstone Project">
           <div class="project-card__top">
-            <span class="project-card__category">Data Analytics</span>
+            <span class="project-card__category--data">Analytics</span>
             <span class="project-card__arrow">&#8599;</span>
           </div>
-          <h3 class="project-card__title">Google Data Analytics<br/>Capstone Project</h3>
+          <span class="project-card__title"><h3>Google Data Analytics</h3><h4>— Certification Project</h4></span>
           <p class="project-card__desc">Completing a full end-to-end analysis using real-world datasets — cleaning, querying in SQL, visualizing in Tableau, and presenting findings.</p>
-          <div class="project-card__tags">
-            <span>SQL</span><span>Tableau</span><span>Data Cleaning</span><span>BigQuery</span>
-          </div>
           <div class="project-card__status">
             <span class="status-dot status-dot--progress"></span>
             In Progress — est. March 2026
           </div>
         </a>
 
-        <a href="#" class="project-card project-card--placeholder" target="_blank" rel="noopener" aria-label="Coming soon">
+        <a href="project.html" class="project-card" aria-label="Codecademy Data Scientist Portfolio Projects">
           <div class="project-card__top">
-            <span class="project-card__category">Data Science</span>
+            <span class="project-card__category--data">Analytics</span>
             <span class="project-card__arrow">&#8599;</span>
           </div>
-          <h3 class="project-card__title">Codecademy Data Scientist<br/>Portfolio Projects</h3>
+          <span class="project-card__title"><h3>Data Scientist: Analytics</h3><h4>— Certification Project</h4></span>
           <p class="project-card__desc">Series of hands-on projects covering statistical analysis, Python scripting, PostgreSQL, and machine learning fundamentals.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>PostgreSQL</span><span>Statistics</span><span>ML</span>
-          </div>
           <div class="project-card__status">
             <span class="status-dot status-dot--progress"></span>
             In Progress — est. April 2026
           </div>
         </a>
 
-        <a href="#" class="project-card project-card--placeholder" target="_blank" rel="noopener" aria-label="Coming soon">
+        <a href="project.html" class="project-card" aria-label="Personal Portfolio Website">
           <div class="project-card__top">
-            <span class="project-card__category">Education</span>
+            <span class="project-card__category--design">Design</span>
             <span class="project-card__arrow">&#8599;</span>
           </div>
-          <h3 class="project-card__title">CS &amp; Engineering<br/>Curriculum Design</h3>
-          <p class="project-card__desc">Scope and sequence built for middle school Computer Science, Engineering, Video Production, and Journalism — aligned to state and industry standards.</p>
-          <div class="project-card__tags">
-            <span>Curriculum</span><span>K–12 CS</span><span>PBL</span><span>Media Literacy</span>
+          <span class="project-card__title"><h3>Portfolio Website</h3><h4>— Web Design</h4></span>
+          <p class="project-card__desc">Built from scratch using HTML, CSS, and vanilla JavaScript. Hosted on GitHub Pages — designed to communicate experience and growth in tech and analytics.</p>
+          <div class="project-card__status">
+            <span class="status-dot status-dot--active"></span>
+            Active — github.com/dustriat
           </div>
+        </a>
+
+        <a href="project.html" class="project-card" aria-label="CS and Engineering Curriculum Design">
+          <div class="project-card__top">
+            <span class="project-card__category--tech">Technology</span>
+            <span class="project-card__arrow">&#8599;</span>
+          </div>
+          <span class="project-card__title"><h3>Computer Science &amp; Engineering</h3><h4>— Curriculum Development</h4></span>
+          <p class="project-card__desc">A multi-year scope and sequence built for middle school Computer Science and Engineering. Created as a pathway into highschool and college using industry standards.</p>
           <div class="project-card__status">
             <span class="status-dot status-dot--active"></span>
             Active — Cherry Creek School District
           </div>
         </a>
 
-        <a href="#" class="project-card project-card--placeholder" target="_blank" rel="noopener" aria-label="Coming soon">
+        <a href="project.html" class="project-card" aria-label="Personal Portfolio Website">
           <div class="project-card__top">
-            <span class="project-card__category">This Site</span>
+            <span class="project-card__category--tech">Technology</span>
             <span class="project-card__arrow">&#8599;</span>
           </div>
-          <h3 class="project-card__title">Personal Portfolio<br/>Website</h3>
-          <p class="project-card__desc">Built from scratch using HTML, CSS, and vanilla JavaScript. Hosted on GitHub Pages — designed to communicate experience and growth in tech and analytics.</p>
-          <div class="project-card__tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span>
-          </div>
+          <span class="project-card__title"><h3>Technology Support</h3><h4>— Case Study</h4></span>
+          <p class="project-card__desc">Coming Soon</p>
           <div class="project-card__status">
-            <span class="status-dot status-dot--active"></span>
-            Live — github.com/dustriat
+            <span class="status-dot status-dot--inactive"></span>
+            Inactive — 
           </div>
         </a>
 
-      </div><!-- /projects__cards -->
+      </div>
     </div>
   </section>
 
-  <!-- ═══ CERTIFICATIONS ═══ -->
-  <section class="certs section" id="certs">
+  <!-- ═══ CREDENTIALS ═══ -->
+  <section class="certs section section--alt" id="certs">
     <div class="container">
       <div class="section-label">
         <span class="section-number">02</span>
-        <span class="section-title">Certifications</span>
+        <span class="section-title">Credentials</span>
       </div>
-      <h2 class="certs__heading">Credentials &amp;<br/><em>Achievements.</em></h2>
-      <p class="certs__sub">Certifications will be displayed here upon completion. Both are estimated to be finished in early 2026.</p>
+      <h2 class="certs__heading">Certification &amp;<br/><em>Achievements</em></h2>
 
       <div class="certs__grid">
 
@@ -250,7 +259,7 @@
           <div class="cert-card__body">
             <span class="cert-card__issuer">Google via Coursera</span>
             <h3 class="cert-card__title">Google Data Analytics<br/>Professional Certificate</h3>
-            <p class="cert-card__desc">Covers data cleaning, analysis, visualization, and storytelling using spreadsheets, SQL, Tableau, and R.</p>
+            <p class="cert-card__desc">Covers data cleaning, analysis, visualization, and storytelling using Excel, SQL, BigQuery, Python, and Tableau.</p>
             <div class="cert-card__meta">
               <span class="cert-card__status cert-card__status--progress">
                 <span class="status-dot status-dot--progress"></span>
@@ -270,8 +279,8 @@
           </div>
           <div class="cert-card__body">
             <span class="cert-card__issuer">Codecademy</span>
-            <h3 class="cert-card__title">Data Scientist: Analytics<br/>Career Path</h3>
-            <p class="cert-card__desc">Hands-on path covering Python, SQL, PostgreSQL, statistical analysis, data visualization, and machine learning fundamentals.</p>
+            <h3 class="cert-card__title">Data Scientist: Analytics<br/>Professional Certificate</h3>
+            <p class="cert-card__desc">Hands-on program covering Python, SQL, PostgreSQL, statistical analysis, data visualization, and machine learning fundamentals.</p>
             <div class="cert-card__meta">
               <span class="cert-card__status cert-card__status--progress">
                 <span class="status-dot status-dot--progress"></span>
@@ -283,17 +292,18 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
   <!-- ═══ CAREER ═══ -->
-  <section class="career section section--alt" id="career">
+  <section class="career section" id="career">
     <div class="container">
       <div class="section-label">
         <span class="section-number">03</span>
         <span class="section-title">Career</span>
       </div>
-      <h2 class="career__heading">Experience &amp;<br/><em>Roles.</em></h2>
+      <h2 class="career__heading">Experience &amp;<br/><em>Positions</em></h2>
 
       <!-- Stats row at top of career section -->
       <div class="career__stats">
@@ -322,81 +332,55 @@
         <div class="career__list">
 
           <article class="career-item">
-            <div class="career-item__meta">
-              <span class="career-item__type">Education</span>
-              <span class="career-item__year">2021 – Present</span>
-            </div>
             <div class="career-item__content">
               <h3>Technology Teacher</h3>
               <span class="career-item__org">Cherry Creek School District &mdash; Aurora, CO</span>
-              <p>
-                Designed scope and sequence for Computer Science, Engineering, Video Production, and Journalism courses aligned to district, state, and industry standards. Led students through project-based learning including coding projects, engineering challenges, video shoots, and post-production editing. Analyzed student learning through formative assessments and reinforced digital citizenship and media literacy across all courses.
-              </p>
+              <span class="career-item__year">2021 – Present</span>
+              <ul>
+                <li>Designed scope and sequence for Computer Science, Engineering, Video Production, and Journalism courses aligned to district, state, and industry standards.</li>
+                <li>Led students through project-based learning including coding projects, engineering challenges, video shoots, and post-production editing.</li>
+                <li>Analyzed student learning through formative assessments and reinforced digital citizenship and media literacy across all courses.</li>
+              </ul>
             </div>
           </article>
 
           <article class="career-item">
-            <div class="career-item__meta">
-              <span class="career-item__type">Technology</span>
-              <span class="career-item__year">2018 – 2021</span>
-            </div>
             <div class="career-item__content">
               <h3>Technology Support Specialist</h3>
               <span class="career-item__org">Cherry Creek School District &mdash; Aurora, CO</span>
-              <p>
-                Prioritized and resolved technical incidents for 800+ administrators, teachers, and students across hardware, software, network, phone, and A/V systems. Maintained detailed documentation of support requests and system changes. Trained staff and students on technology best practices and proactive cybersecurity, improving overall system reliability and reducing repeat incidents across the school.
-              </p>
+              <span class="career-item__year">2018 – 2021</span>
+              <ul>
+                <li>Prioritized and resolved technical incidents for 800+ administrators, teachers, and students across hardware, software, network, phone, and A/V systems.</li>
+                <li>Maintained detailed documentation of support requests and system changes.</li>
+                <li>Trained staff and students on technology best practices and proactive cybersecurity, improving overall system reliability and reducing repeat incidents across the school.</li>
+              </ul>
             </div>
           </article>
 
           <article class="career-item">
-            <div class="career-item__meta">
-              <span class="career-item__type">Business</span>
-              <span class="career-item__year">2015 – 2018</span>
-            </div>
             <div class="career-item__content">
               <h3>Inventory Manager</h3>
               <span class="career-item__org">BikeSource Denver &mdash; Denver, CO</span>
-              <p>
-                Managed all shipping, receiving, and inventory operations. Used point-of-sale reports to analyze trends, monitor stock levels, and initiate reorders. Coordinated inventory status and discrepancies with internal departments and external vendors, maintaining accurate records through regular audits, cycle counts, and sales reports.
-              </p>
-            </div>
-            <div class="career-item__meta">
-              <span class="career-item__type"></span>
-              <span class="career-item__year"></span>
-            </div>
-            <div class="career-item__content">
-              <h3>Service Advisor &amp; Technician</h3>
-              <span class="career-item__org">BikeSource Denver &mdash; Denver, CO</span>
-              <p>
-                Served as the primary customer contact for diagnostics, repair options, timelines, and costs. Diagnosed and resolved mechanical issues across all brands and models. Managed service workflow to meet deadlines, balance multiple repairs, and maintain an efficient
-                service area. Documented all work performed and collaborated with sales and service teams.
-              </p>
+              <span class="career-item__year">2017 – 2018</span>
+              <ul>
+                <li>Managed all shipping, receiving, and inventory operations.</li>
+                <li>Used point-of-sale reports to analyze trends, monitor stock levels, and initiate reorders.</li>
+                <li>Coordinated inventory status and discrepancies with internal departments and external vendors, maintaining accurate records through regular audits, cycle counts, and sales reports.</li>
+              </ul>
             </div>
           </article>
 
           <article class="career-item">
-            <div class="career-item__meta">
-              <span class="career-item__type">Technology</span>
-              <span class="career-item__year">2008 – 2014</span>
-            </div>
             <div class="career-item__content">
-              <h3>Network Support Student</h3>
-              <span class="career-item__org">KU Information Technology &mdash; Lawrence, KS</span>
-              <p>
-                Receive and analyze new work requests to prepare for technicians to perform work. Process completed work orders into database to organize voice and data connections. Respond to customer calls and emails to clarify work to be performed. Learn new systems to keep up to date on the latest software.
-              </p>
-            </div>
-            <div class="career-item__meta">
-              <span class="career-item__type"></span>
-              <span class="career-item__year"></span>
-            </div>
-            <div class="career-item__content">
-              <h3>Installation Technician</h3>
-              <span class="career-item__org">KU Information Technology &mdash; Lawrence, KS</span>
-              <p>
-                Install and program new data and telephone connections for the customer. Participate in training to expand knowledge and abilities of data systems. Support co-workers with large projects by communicating and working together. Diagnose errors and failures in the network and develop a solution.
-              </p>
+              <h3>Service Advisor &amp; Technician</h3>
+              <span class="career-item__org">BikeSource Denver &mdash; Denver, CO</span>
+              <span class="career-item__year">2015 – 2017</span>
+              <ul>
+                <li>Served as the primary customer contact for diagnostics, repair options, timelines, and costs.</li>
+                <li>Diagnosed and resolved mechanical issues across all brands and models.</li>
+                <li>Managed service workflow to meet deadlines, balance multiple repairs, and maintain an efficient service area.</li>
+                <li>Documented all work performed and collaborated with sales and service teams.</li>
+              </ul>
             </div>
           </article>
 
@@ -475,72 +459,72 @@
   </section>
 
   <!-- ═══ SKILLS ═══ -->
-  <section class="skills section" id="skills">
+  <section class="skills section section--alt" id="skills">
     <div class="container">
       <div class="section-label">
         <span class="section-number">04</span>
         <span class="section-title">Skills</span>
       </div>
-      <h2 class="skills__heading">What I bring<br/><em>for success</em></h2>
+      <h2 class="skills__heading">Expertise &amp;<br/><em>Abilities</em></h2>
       <div class="skills__grid">
 
         <!-- Card 1 -->
         <div class="skill-card">
-          <h3>Technology Support Skills</h3>
-          <p>Primarily experienced with end-user support for desktop, tablet, audiovisual systems, phones, and printers. Moderate experience with networks and configurations.</p>
+          <h3>Technology Skills</h3>
+          <p>Experienced with end-user support for desktop, tablet, audiovisual systems, phones, and printers. Maintained networks, identity profiles, and system configurations.</p>
           <div class="skill-card__tags">
-            <div class="skill-row">
+            <div class="skill-row--tech">
               <span class="skill-row__label">Hardware Repair</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--tech">
               <span class="skill-row__label">Software Troubleshooting</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-                <div class="skill-row">
+                <div class="skill-row--tech">
               <span class="skill-row__label">Operating Systems</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--tech">
               <span class="skill-row__label">System Configuration</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--tech">
               <span class="skill-row__label">Identity Management</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--tech">
               <span class="skill-row__label">Network Connectivity</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--tech">
               <span class="skill-row__label">Ticketing Systems</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--tech">
               <span class="skill-row__label">Remote Access Tools</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--tech">
               <span class="skill-row__label">Microsoft Office 365</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
           </div>
@@ -548,61 +532,61 @@
 
         <!-- Card 2 -->
         <div class="skill-card">
-          <h3>Data Analytics Skills</h3>
+          <h3>Analytics Skills</h3>
           <p>Building proficiency in the analytics workflow through courses and certifications. Continuing to learn data cleaning, database querying, visualization, and statistical analysis.</p>
           <div class="skill-card__tags">
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">Microsoft Excel</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">SQL</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">Python</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">BigQuery</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">PostgreSQL</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">Data Visualization</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">Tableau</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">Statistical Analysis</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--data">
               <span class="skill-row__label">AI and Machine Learning</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
           </div>
@@ -610,61 +594,61 @@
 
         <!-- Card 3 -->
         <div class="skill-card">
-          <h3>Personality Skills</h3>
+          <h3>Personal Skills</h3>
           <p>Extensive experience working with teams and communicating with various levels of stakeholders and users. While teaching, I developed these critical skills in students.</p>
           <div class="skill-card__tags">
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Problem-Solving</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Attention to Detail</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Critical Thinking</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Teamwork</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Communication</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Presentations</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Self-Motivation</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Time Management</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>
-            <div class="skill-row">
+            <div class="skill-row--soft">
               <span class="skill-row__label">Adaptability</span>
               <div class="skill-row__bars">
-                <div class="skill-bar filled-accent"></div>
+                <div class="skill-bar"></div>
               </div>
             </div>                        
           </div>
@@ -680,11 +664,4 @@
       <div class="footer__inner">
         <span class="footer__name">Dustin Riat</span>
         <span class="footer__copy">Built with HTML, CSS &amp; JS &mdash; Hosted on GitHub Pages</span>
-        <a href="#home" class="footer__top">Back to top &uarr;</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+        <a href="#home"
