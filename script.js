@@ -217,10 +217,51 @@ function initSmoothScroll() {
   });
 }
 
+// ── Lightbox for step images ─────────────────────────────────────
+function initStepImageLightbox() {
+  const lightbox      = document.getElementById('lightbox');
+  const lightboxImg   = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  if (!lightbox || !lightboxImg) return;
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Open on step-img click
+  document.querySelectorAll('.step-img-wrap').forEach(wrap => {
+    wrap.addEventListener('click', () => {
+      const img = wrap.querySelector('.step-img');
+      if (img) openLightbox(img.src, img.alt);
+    });
+  });
+
+  // Close via button, backdrop click, or Escape
+  lightboxClose && lightboxClose.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+  });
+}
+
 // ── Init all ─────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initActiveNav();
   initContactForm();
   initSmoothScroll();
+  initStepImageLightbox();
 });
