@@ -56,7 +56,6 @@ function initReveal() {
     ['.contact__left',          ''],
     ['.contact__form',          ''],
     ['.about',                  ''],
-    ['.projects__intro',        ''],
     ['.project-card',           ''],
     ['.cred-card',              ''],
     ['.career__stats',          ''],
@@ -81,10 +80,14 @@ function initReveal() {
       let delay = 0;
       const parent = el.parentElement;
 
+      if (el.classList.contains('solo')) {
+      wrap.classList.add('solo');
+      }
+
       if (parent) {
         // Grid stagger: projects, skills, creds
         if (
-          parent.classList.contains('projects__cards') ||
+          parent.classList.contains('projects__grid') ||
           parent.classList.contains('skills__grid') ||
           parent.classList.contains('creds__grid')
         ) {

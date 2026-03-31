@@ -85,7 +85,7 @@ em {
   padding: 0 var(--container-pad);
 }
 
-.section { padding: clamp(4rem, 9vw, 6.5rem) 0; }
+.section { padding: clamp(2rem, 4vw, 5rem) 0 clamp(4rem, 8vw, 6.5rem); }
 
 .section--alt {
   background: linear-gradient(160deg, #e8ebf2 0%, #edf0f6 60%, #e6eaf2 100%);
@@ -307,11 +307,10 @@ em {
   max-width: var(--container-max);
   margin: 0 auto;
   position: relative;
-  gap: 3.5rem;
 }
 
 /* ── Top row: headline + photo ── */
-.hero__inner {
+.hero__content {
   display: grid;
   grid-template-columns: 1fr 340px;
   gap: 4rem;
@@ -411,7 +410,7 @@ em {
   gap: 0.1rem;
 }
 
-.hero__badge-label {
+.hero__badge-available {
   font-family: var(--font-mono);
   font-size: 0.62rem;
   text-transform: uppercase;
@@ -420,7 +419,13 @@ em {
   display: block;
 }
 
-.hero__badge-label--bold {
+.hero__badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.hero__badge-work {
   font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 800;
@@ -429,19 +434,22 @@ em {
   text-transform: uppercase;
 }
 
-/* ── Contact strip (below headline + photo, inside hero) ── */
-.hero__contact-strip {
+.hero__badge-divider {
+  color: var(--blue);
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+/* ============================
+   CONTACT — grid, links, and form
+   ============================ */
+.contact-strip {
   padding-top: 2rem;
   border-top: 1px solid var(--color-border);
   opacity: 0;
   animation: fadeUp 0.8s 1.2s forwards;
 }
 
-/* ============================
-   CONTACT — grid, links, and form
-   ============================ */
-
-/* Shared grid used inside hero strip and any standalone contact section */
 .contact__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -570,7 +578,7 @@ em {
   text-transform: uppercase;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .about p {
@@ -578,17 +586,12 @@ em {
   font-size: 0.95rem;
   line-height: 1.78;
   max-width: 72ch;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 /* ============================
    PROJECTS
    ============================ */
-.projects__intro {
-  max-width: 72ch;
-  margin-bottom: 3rem;
-}
-
 .projects__heading {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.75rem);
@@ -603,10 +606,10 @@ em {
   color: var(--color-ink-muted);
   font-size: 0.95rem;
   line-height: 1.75;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.25rem;
 }
 
-.projects__cards {
+.projects__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
@@ -616,15 +619,20 @@ em {
 .project-card {
   display: flex;
   flex-direction: column;
+  width: 100%; height: 100%;
   gap: 0.75rem;
   background: var(--color-surface);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  padding: 1.5rem;
   transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
   position: relative;
   overflow: hidden;
   cursor: pointer;
+}
+
+.project-card.solo {
+  width: 100%; height: 100%;
 }
 
 .project-card::before {
@@ -652,7 +660,7 @@ em {
 }
 
 /* ── Project card thumbnails ── */
-.project-card__thumbs {
+.project-card__thumb-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.65rem;
@@ -663,8 +671,12 @@ em {
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   overflow: hidden;
-  background: linear-gradient(135deg, #e6eaf4, #dde3f0);
+  background: var(--color-bg-alt);
   border: 1px solid var(--color-border-light);
+}
+
+.project-card__thumb.solo{
+  width: 100%; height: 100%;
 }
 
 .project-card__thumb img {
@@ -849,14 +861,7 @@ em {
   text-transform: uppercase;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin-bottom: 0.75rem;
-}
-
-.creds__sub {
-  font-size: 0.9rem;
-  color: var(--color-ink-muted);
-  margin-bottom: 2.5rem;
-  max-width: 56ch;
+  margin-bottom: 1.25rem;
 }
 
 .creds__grid {
@@ -867,45 +872,53 @@ em {
 }
 
 .cred-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%; height: 100%;
   background: var(--color-surface);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: box-shadow var(--transition), transform var(--transition);
+  transition: box-shadow var(--transition), color var(--transition), transform var(--transition);
 }
 
-/* Pending / in-progress state */
-.cred-card--pending { 
-  opacity: 0.85;
+.cred-card.solo {
+  width: 100%; height: 100%;
 }
 
 .cred-card:hover {
+  border-color: var(--color-border);
   box-shadow: 0 10px 36px rgba(102, 184, 255, 0.35);
   transform: translateY(-2px);
 }
 
 .cred-card__img-wrap {
   width: 100%;
-  aspect-ratio: 1.29 / 1;
+  max-width: 600px;
+  aspect-ratio: 1.294 / 1;
   overflow: hidden;
-  background: linear-gradient(135deg, #e6eaf4, #dde3f0);
+  background: var(--color-bg-alt);
   border-bottom: 1px solid var(--color-border-light);
 }
 
 .cred-card__img-wrap img {
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  image-rendering: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   transition: transform 0.55s ease;
 }
 
 .cred-card:hover .cred-card__img-wrap img { transform: scale(1.03); }
 
 .cred-card__body {
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
 }
 
 .cred-card__issuer {
@@ -934,9 +947,9 @@ em {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.75rem;
+  padding: 0.75rem 0 1.5rem;
   border-top: 1px solid var(--color-border-light);
-  margin-top: 0.25rem;
+  margin: 0.25rem 1.5rem 0;
 }
 
 .cred-card__status {
@@ -963,7 +976,7 @@ em {
   text-transform: uppercase;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 /* ── Stats row ── */
@@ -1184,7 +1197,7 @@ em {
   text-transform: uppercase;
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin-bottom: 3rem;
+  margin-bottom: 1.25rem;
 }
 
 .skills__grid {
@@ -1195,6 +1208,7 @@ em {
 
 /* ── Skill card ── */
 .skill-card {
+  height: 100%;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -1370,16 +1384,26 @@ em {
   to   { opacity: 1; }
 }
 
-/* ── Reveal wrapper system ──────────────────────────────────────
-   .reveal-wrap is placed around the interactive element (card,
-   section, etc). The wrapper handles opacity + translateY for
-   the entrance. The inner element retains full control of its
-   own transform for hover effects — zero conflict.
-   ─────────────────────────────────────────────────────────────── */
+/* ── Reveal wrapper system ── */
 .reveal-wrap {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.65s ease, transform 0.65s ease;
+  width: 100%;
+}
+
+.reveal-wrap.solo {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.reveal-wrap.solo .project-card, .reveal-wrap.solo .cred-card {
+  max-width: 600px;
+}
+
+.reveal-wrap.solo .project-card__thumb {
+  max-width: 200px;
 }
 
 .reveal-wrap.visible {
@@ -1397,7 +1421,7 @@ em {
    ============================ */
 @media (max-width: 1000px) {
   .skills__grid    { grid-template-columns: 1fr 1fr; }
-  .projects__cards { grid-template-columns: 1fr 1fr; }
+  .projects__grid { grid-template-columns: 1fr 1fr; }
   .creds__grid     { grid-template-columns: 1fr 1fr; }
 }
 
@@ -1437,8 +1461,9 @@ em {
   .hero__photo-badge { left: -0.5rem; bottom: -0.6rem; }
 
   .skills__grid    { grid-template-columns: 1fr; }
-  .projects__cards { grid-template-columns: 1fr; }
+  .projects__grid { grid-template-columns: 1fr; }
   .creds__grid     { grid-template-columns: 1fr; }
+  .reveal-wrap.solo {grid-column: span 1;}
 
   .career__stats   { flex-direction: column; gap: 1.5rem; }
   .stat            { border-right: none; border-bottom: 1px solid var(--color-border); padding: 0 0 1rem 0 !important; }
