@@ -55,7 +55,7 @@ function initReveal() {
   const revealTargets = [
     ['.contact__left',          ''],
     ['.contact__form',          ''],
-    ['.about',                  ''],
+    ['.about__story',           ''],
     ['.project-card',           ''],
     ['.cred-card',              ''],
     ['.career__stats',          ''],
