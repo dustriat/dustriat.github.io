@@ -96,9 +96,9 @@
     <div class="contact-strip">
       <div class="container">
         <div class="contact__grid">
-          <aside class="contact__left">
-            <h2 class="contact__heading">Let's</h2>
-            <h2 class="contact__heading contact__heading--2">Connect</h2>
+          <aside class="contact__info">
+            <h2 class="section__heading">Let's</h2>
+            <h2 class="section__heading section__heading--2">Connect</h2>
             <p>
               Exploring collaboration? Growing your business?
               Question about my work? Want to talk technology?
@@ -124,7 +124,7 @@
               </a>
             </div>
           </aside>
-          <form class="contact__form" id="contactForm">
+          <form class="contact__form" id="contactForm" action="https://formspree.io/f/xeeverko" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -148,41 +148,42 @@
 
   <main>
     <!-- ═══ ABOUT ME ═══ -->
-    <section class="about section section--alt" id="about">
+    <section class="section section--alt" id="about">
       <div class="container">
         <div class="section-label">
           <span class="section-number">01</span>
           <span class="section-title">About Me</span>
         </div>
-        <h2 class="about__heading">Introduction &amp;</h2>
-        <h2 class="about__heading--2">Values</h2>
-        <p class="about__story">
+        <h2 class="section__heading">Introduction &amp;</h2>
+        <h2 class="section__heading section__heading--2">Values</h2>
+        <p>
           <span class="about__highlight">Growing up </span>I was always interested in how things worked. My grandfather used to take us to the dump in his small town, find “broken” bikes, lawnmowers, and furniture, and bring them back to his shop to fix. Sometimes he would take parts from multiple bikes just to build one that we could ride all summer. He believed most things weren’t truly broken, but people just didn’t know how to fix them. My dad also has a similar mindset. He has a full workshop where he has built furniture, worked on trucks, and repaired old appliances. In that environment, I naturally started taking things apart too. Fixing toys, woodworking, and eventually repairing electronics. In school, my choice classes always focused on engineering and computing.
         </p>
-        <p class="about__story">
+        <p>
           <span class="about__highlight">Across my career </span>I have used this mindset repeatedly. From working as a technician to teaching, and now building projects in analytics and development. I’ve always approached problems by trying to understand how things work at a deeper level, breaking them down, and rebuilding them into something more functional and easier to use. Teaching especially changed how I think. It forced me to consider how different people approach problems and how to present complex ideas in a way that actually makes sense to them. I learned to break concepts down to manageable sizes, and that solving a problem isn’t just about getting the right answer, it’s about making the solution usable and understandable for others.
         </p>
-        <p class="about__story">
+        <p>
           <span class="about__highlight">Outside of work </span>most of my time is spent with my wife, Jenny, and our son Sully. We like to take things easy by getting outside for sports, playing video games, and relaxing to end the day. I still spend time working on projects like remodeling our basement and fixing vintage electronics. Recently, I restored a 70s pachinko machine by re-designing and 3D-printing a replacement part that couldn’t be found anywhere. Another time, while playing Mario Kart together, Sully asked me why he couldn’t drive in deep mud. I explained how, in the real world, mud would slow you down, but I also explained how the game code has conditions and interactions to handle how we play. I admit it was probably over my 5-year-old's head, but he’s a curious learner.
         </p>
-        <p class="about__story">
+        <p>
           <span class="about__highlight">At this point </span>I’m focused on continuing to grow and spend more time where I can design, create, and improve projects over time.
         </p>
       </div>
     </section>
 
     <!-- ═══ PROJECTS ═══ -->
-    <section class="projects section" id="projects">
+    <section class="section" id="projects">
       <div class="container">
         <div class="section-label">
           <span class="section-number">02</span>
           <span class="section-title">Projects</span>
         </div>
 
-          <h2 class="projects__heading">Portfolio &amp;<br/><em>Showcases</em></h2>
-          <p>
-            These projects reflect how I approach problems: understand the situation, break it down, and build solutions that can be improved over time. They range from data analysis and decision-making to design and development, but all focus on creating something practical and usable.
-          </p>
+        <h2 class="section__heading">Portfolio &amp;</h2>
+        <h2 class="section__heading section__heading--2">Showcases</h2>
+        <p>
+          These projects reflect how I approach problems: understand the situation, break it down, and build solutions that can be improved over time. They range from data analysis and decision-making to design and development, but all focus on creating something practical and usable.
+        </p>
 
         <!-- ═══ PROJECT CARDS ═══ -->
         <div class="projects__grid">
@@ -201,7 +202,7 @@
               <div class="project-card__thumb"><img src="project_pages/google_capstone/placeholder.jpg" alt="Tableau preview" /></div>
             </div>
             
-            <p class="project-card__desc">Completing a full end-to-end analysis using real-world datasets — cleaning, querying in SQL, visualizing in Tableau, and presenting findings.</p>
+            <p class="project-card__desc">Applies the full analytics workflow to a real-world dataset, from cleaning and SQL querying to visualization and insights. Focuses on turning raw data into clear, actionable conclusions.</p>
             <div class="project-card__meta">
               <span class="project-card__status">
                 <span class="status-dot status-dot--progress"></span>
@@ -226,7 +227,7 @@
               <div class="project-card__thumb one"><img src="project_pages/codecademy_projects/placeholder.jpg" alt="Python preview" /></div>
             </div>
             
-            <p class="project-card__desc">Series of hands-on projects covering statistical analysis, Python scripting, PostgreSQL, and machine learning fundamentals.</p>
+            <p class="project-card__desc">Hands-on projects exploring statistical analysis, Python, and machine learning fundamentals. Emphasizes building and evaluating models while strengthening core data skills.</p>
             <div class="project-card__meta">
               <span class="project-card__status">
                 <span class="status-dot status-dot--progress"></span>
@@ -252,7 +253,7 @@
               <div class="project-card__thumb"><img src="project_pages/web_design/placeholder.jpg" alt="JavaScript preview" /></div>
             </div>
             
-            <p class="project-card__desc">Designed and built using HTML, CSS, and JavaScript. Created to demonstrate experience in technology, programming, and web design.</p>
+            <p class="project-card__desc">Designed and developed a responsive site to present projects and skills. Focuses on usability, structure, and clean front-end implementation.</p>
             <div class="project-card__meta">
               <span class="project-card__status">
                 <span class="status-dot status-dot--active"></span>
@@ -278,7 +279,7 @@
               <div class="project-card__thumb"><img src="project_pages/school_curriculum/placeholder.jpg" alt="Engineering preview" /></div>
             </div>
             
-            <p class="project-card__desc">A multi-year scope and sequence built for middle school Computer Science and Engineering. Created as a pathway into highschool and college using industry standards.</p>
+            <p class="project-card__desc">Developed a multi-year curriculum aligned with industry standards and real-world applications. Structured to guide students from foundational concepts to advanced topics.</p>
             <div class="project-card__meta">
               <span class="project-card__status">
                 <span class="status-dot status-dot--active"></span>
@@ -290,43 +291,19 @@
             </div>
           </a>
 
-          <a href="project_pages/tech_support.html" class="project-card solo" aria-label="Tech Support Case Study">
-            <div class="project-card__top">
-              <div class="project-card__title">
-                <h3>Technology Support</h3>
-                <h4>— Case Study</h4></div>
-              <span class="project-card__arrow">&#8599;</span>
-            </div>
-
-            <div class="project-card__thumb-grid">
-              <div class="project-card__thumb"><img src="project_pages/tech_support/placeholder.jpg" alt="IT support preview" /></div>
-              <div class="project-card__thumb"><img src="project_pages/tech_support/placeholder.jpg" alt="Case study preview" /></div>
-            </div>
-            
-            <p class="project-card__desc">Technology incident report from 2020 supporting teachers and students in transition to online learning. Documentation of original issue, process, resolution, and reporting.</p>
-            <div class="project-card__meta">
-              <span class="project-card__status">
-                <span class="status-dot status-dot--inactive"></span>
-                Archived | CCSD
-              </span>
-              <span class="project-card__eta">
-                Resolved 2020
-              </span>
-            </div>
-          </a>
-
         </div>
       </div>
     </section>
 
     <!-- ═══ CREDENTIALS ═══ -->
-    <section class="credential section section--alt" id="creds">
+    <section class="section section--alt" id="creds">
       <div class="container">
         <div class="section-label">
           <span class="section-number">03</span>
           <span class="section-title">Credentials</span>
         </div>
-        <h2 class="creds__heading">Certification &amp;<br/><em>Achievements</em></h2>
+        <h2 class="section__heading">Certification &amp;</h2>
+        <h2 class="section__heading section__heading--2">Achievements</h2>
         <p>
           My education provides the foundation of knowledge that I’m continuously building. As I transition into product-focused work, my emphasis is on developing practical skills in data analysis, problem-solving, and user experience design.
         </p>
@@ -393,13 +370,14 @@
     </section>
 
     <!-- ═══ CAREER ═══ -->
-    <section class="career section" id="career">
+    <section class="section" id="career">
       <div class="container">
         <div class="section-label">
           <span class="section-number">04</span>
           <span class="section-title">Career</span>
         </div>
-        <h2 class="career__heading">Experience &amp;<br/><em>Positions</em></h2>
+        <h2 class="section__heading">Experience &amp;</h2>
+        <h2 class="section__heading section__heading--2">Positions</h2>
         <p>
           My career is rooted in solving real-world problems to support users, improve systems, and help others use technology effectively. Across technical support, education, and operations, I’ve consistently worked to break down complex issues and deliver practical solutions.
         </p>
@@ -500,7 +478,7 @@
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-item__era">2021 – 2026</div>
+              <div class="timeline-item__era">2021 &mdash; 2026</div>
               <div class="timeline-item__title">Technology Teacher</div>
               <div class="timeline-item__sub">Cherry Creek School District</div>
             </div>
@@ -513,25 +491,25 @@
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-item__era">2018 – 2021</div>
+              <div class="timeline-item__era">2018 &mdash; 2021</div>
               <div class="timeline-item__title">Technology Support Specialist</div>
               <div class="timeline-item__sub">Cherry Creek School District</div>
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-item__era">2017 – 2018</div>
+              <div class="timeline-item__era">2017 &mdash; 2018</div>
               <div class="timeline-item__title">Inventory Manager</div>
               <div class="timeline-item__sub">BikeSource Denver</div>
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-item__era">2015 – 2017</div>
+              <div class="timeline-item__era">2015 &mdash; 2017</div>
               <div class="timeline-item__title">Service Advisor &amp; Technician</div>
               <div class="timeline-item__sub">BikeSource Denver</div>
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-item__era">2013 – 2014</div>
+              <div class="timeline-item__era">2013 &mdash; 2014</div>
               <div class="timeline-item__title">Network Support Student</div>
               <div class="timeline-item__sub">KU Information Technology</div>
             </div>
@@ -544,13 +522,13 @@
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-item__era">2011 – 2013</div>
+              <div class="timeline-item__era">2011 &mdash; 2013</div>
               <div class="timeline-item__title">Customer Service Representative</div>
               <div class="timeline-item__sub">Hy-Vee</div>
             </div>
 
             <div class="timeline-item">
-              <div class="timeline-item__era">2008 – 2010</div>
+              <div class="timeline-item__era">2008 &mdash; 2010</div>
               <div class="timeline-item__title">Network Installation Technician</div>
               <div class="timeline-item__sub">KU Information Technology</div>
             </div>
@@ -562,13 +540,14 @@
     </section>
 
     <!-- ═══ SKILLS ═══ -->
-    <section class="skills section section--alt" id="skills">
+    <section class="section section--alt" id="skills">
       <div class="container">
         <div class="section-label">
           <span class="section-number">05</span>
           <span class="section-title">Skills</span>
         </div>
-        <h2 class="skills__heading">Expertise &amp;<br/><em>Abilities</em></h2>
+        <h2 class="section__heading">Expertise &amp;</h2>
+        <h2 class="section__heading section__heading--2">Abilities</h2>
         <p>
           My skill set has emerged from my core methodology. Understand the problem, design a solution, build it, and continuously improve it. I combine data analysis, user experience thinking, and technical implementation to create products that are both functional and easy to use.
         </p>
@@ -577,8 +556,8 @@
 
           <!-- ═══ ANALYTICS ═══ -->
           <article class="skill-card">
-            <h3>Data &amp; Analytics</h3>
-            <p>Building proficiency in the analytics workflow through courses and certifications. Continuing to learn data cleaning, database querying, visualization, and statistical analysis.</p>
+            <h3>Product &amp; Data Analytics</h3>
+            <p>Developing a strong foundation in data analysis and product thinking through coursework and applied projects. Uses data to understand user behavior, inform decisions, and evaluate outcomes.</p>
             <div class="skill-card__rows">
               <div class="skill-row--data">
                 <span class="skill-row__label">Spreadsheets</span>
@@ -588,38 +567,26 @@
                 <span class="skill-row__label">SQL</span>
                 <div class="skill-bar"></div>
               </div>
-              <!--
               <div class="skill-row--data">
                 <span class="skill-row__label">Python</span>
                 <div class="skill-bar"></div>
               </div>
-              -->
               <div class="skill-row--data">
                 <span class="skill-row__label">BigQuery</span>
                 <div class="skill-bar"></div>
               </div>
-              <!--
               <div class="skill-row--data">
                 <span class="skill-row__label">PostgreSQL</span>
                 <div class="skill-bar"></div>
               </div>
-              -->
               <div class="skill-row--data">
                 <span class="skill-row__label">Data Visualization</span>
                 <div class="skill-bar"></div>
               </div>
-              <!--
               <div class="skill-row--data">
                 <span class="skill-row__label">Tableau</span>
                 <div class="skill-bar"></div>
               </div>
-              -->
-              <!--
-              <div class="skill-row--data">
-                <span class="skill-row__label">Looker Studio</span>
-                <div class="skill-bar"></div>
-              </div>
-              -->
               <div class="skill-row--data">
                 <span class="skill-row__label">Statistical Analysis</span>
                 <div class="skill-bar"></div>
@@ -630,64 +597,24 @@
                 <div class="skill-bar"></div>
               </div>
               -->
-            </div>
-          </article>
-
-          <!-- ═══ TECHNICAL ═══ -->
-          <article class="skill-card">
-            <h3>Technical &amp; Support</h3>
-            <p>Experienced with end-user support for desktop, tablet, audiovisual systems, phones, and printers. Maintained networks, identity profiles, and system configurations.</p>
-            <div class="skill-card__rows">
-              <div class="skill-row--tech">
-                <span class="skill-row__label">Hardware Repair</span>
-                <div class="skill-bar"></div>
-              </div>
-              <div class="skill-row--tech">
-                <span class="skill-row__label">Software Troubleshooting</span>
-                <div class="skill-bar"></div>
-              </div>
-                  <div class="skill-row--tech">
-                <span class="skill-row__label">Windows 11 &amp; macOS</span>
-                <div class="skill-bar"></div>
-              </div>
               <!--
-              <div class="skill-row--tech">
-                <span class="skill-row__label">Microsoft Intune</span>
+              <div class="skill-row--data">
+                <span class="skill-row__label">Amplitude</span>
                 <div class="skill-bar"></div>
               </div>
               -->
-              <div class="skill-row--tech">
-                <span class="skill-row__label">Active Directory</span>
-                <div class="skill-bar"></div>
-              </div>
-              <div class="skill-row--tech">
-                <span class="skill-row__label">Network Connectivity</span>
-                <div class="skill-bar"></div>
-              </div>
-              <div class="skill-row--tech">
-                <span class="skill-row__label">Incident IQ (Ticketing)</span>
-                <div class="skill-bar"></div>
-              </div>
               <!--
-              <div class="skill-row--tech">
-                <span class="skill-row__label">ServiceNow</span>
+              <div class="skill-row--data">
+                <span class="skill-row__label">A/B Testing</span>
                 <div class="skill-bar"></div>
               </div>
-            -->
-              <div class="skill-row--tech">
-                <span class="skill-row__label">Chrome Remote Desktop</span>
-                <div class="skill-bar"></div>
-              </div>
-              <div class="skill-row--tech">
-                <span class="skill-row__label">Microsoft Office 365</span>
-                <div class="skill-bar"></div>
-              </div>
+              -->
             </div>
           </article>
 
           <!-- ═══ DESIGN ═══ -->
           <article class="skill-card">
-            <h3>Product &amp; Design</h3>
+            <h3>UX Design &amp; Development</h3>
             <p>Practical application of design skills for web and mobile apps with a focus on user interaction. Emphasis on analytical approach for visual design to support ease of use.</p>
             <div class="skill-card__rows">
               <div class="skill-row--design">
@@ -698,18 +625,35 @@
                 <span class="skill-row__label">Design Thinking</span>
                 <div class="skill-bar"></div>
               </div>
-              <!--
               <div class="skill-row--design">
                 <span class="skill-row__label">Information Architecture</span>
                 <div class="skill-bar"></div>
               </div>
-              -->
+              <!--
               <div class="skill-row--design">
                 <span class="skill-row__label">User Flows</span>
                 <div class="skill-bar"></div>
               </div>
+              -->
+              <!--
+              <div class="skill-row--design">
+                <span class="skill-row__label">Miro</span>
+                <div class="skill-bar"></div>
+              </div>
+              -->
               <div class="skill-row--design">
                 <span class="skill-row__label">Wireframing</span>
+                <div class="skill-bar"></div>
+              </div>
+              <!--
+              <div class="skill-row--design">
+                <span class="skill-row__label">Prototyping
+                </span>
+                <div class="skill-bar"></div>
+              </div>
+              -->
+              <div class="skill-row--design">
+                <span class="skill-row__label">Graphic Design</span>
                 <div class="skill-bar"></div>
               </div>
               <div class="skill-row--design">
@@ -728,13 +672,7 @@
               -->
               <!--
               <div class="skill-row--design">
-                <span class="skill-row__label">Amplitude</span>
-                <div class="skill-bar"></div>
-              </div>
-              -->
-              <!--
-              <div class="skill-row--design">
-                <span class="skill-row__label">A/B Testing</span>
+                <span class="skill-row__label">React</span>
                 <div class="skill-bar"></div>
               </div>
               -->                        
@@ -774,10 +712,12 @@
                 <span class="skill-row__label">Technical Writing</span>
                 <div class="skill-bar"></div>
               </div>
+              <!--
               <div class="skill-row--bus">
                 <span class="skill-row__label">Self-Motivated</span>
                 <div class="skill-bar"></div>
               </div>
+              -->
               <div class="skill-row--bus">
                 <span class="skill-row__label">Time Management</span>
                 <div class="skill-bar"></div>
