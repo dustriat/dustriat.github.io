@@ -53,10 +53,8 @@ function initReveal() {
   // Each entry: [selector, extraClass]
   // extraClass 'reveal-wrap--sm' uses shorter translateY travel
   const revealTargets = [
-    ['.contact__left',          ''],
-    ['.contact__form',          ''],
-    ['.about',                  ''],
-    ['.projects__intro',        ''],
+    ['.contact-strip',          ''],
+    ['.section p',              ''],
     ['.project-card',           ''],
     ['.cred-card',              ''],
     ['.career__stats',          ''],
@@ -81,10 +79,14 @@ function initReveal() {
       let delay = 0;
       const parent = el.parentElement;
 
+      if (el.classList.contains('solo')) {
+      wrap.classList.add('solo');
+      }
+
       if (parent) {
         // Grid stagger: projects, skills, creds
         if (
-          parent.classList.contains('projects__cards') ||
+          parent.classList.contains('projects__grid') ||
           parent.classList.contains('skills__grid') ||
           parent.classList.contains('creds__grid')
         ) {
@@ -162,14 +164,15 @@ function initActiveNav() {
   sections.forEach(section => observer.observe(section));
 }
 
-// ── Contact form (no backend — mailto fallback) ──────────────────
+// ── Contact form (with mailto fallback) ────────────────────────────
 function initContactForm() {
   const form     = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
+  const button   = form?.querySelector('button');
 
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name    = form.name.value.trim();
@@ -181,16 +184,35 @@ function initContactForm() {
       return;
     }
 
-    // Build a mailto link as a graceful fallback
-    const subject  = encodeURIComponent(`Portfolio Contact from ${name}`);
-    const body     = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    const mailto   = `mailto:dustriat@gmail.com?subject=${subject}&body=${body}`;
+    button.disabled = true;
+    showNote('Sending message...', 'pending');
 
-    // Try to open mail client
-    window.location.href = mailto;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
 
-    showNote('Opening your mail client… if nothing opens, email me directly!', 'success');
-    form.reset();
+      if (res.ok) {
+        showNote('Message sent successfully!', 'success');
+        form.reset();
+        button.disabled = false;
+        return;
+      }
+
+      throw new Error('Formspree error');
+    } catch (err) {
+      // ── Fallback to mailto ────────────────────────────────
+      const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+      const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+      const mailto  = `mailto:dustriat@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+
+      showNote('Could not send automatically. Opening email client...', 'error');
+      button.disabled = false;
+    }
   });
 
   function showNote(msg, type) {
