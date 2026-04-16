@@ -53,8 +53,7 @@ function initReveal() {
   // Each entry: [selector, extraClass]
   // extraClass 'reveal-wrap--sm' uses shorter translateY travel
   const revealTargets = [
-    ['.contact__info',          ''],
-    ['.contact__form',          ''],
+    ['.contact-strip',          ''],
     ['.section p',              ''],
     ['.project-card',           ''],
     ['.cred-card',              ''],
@@ -173,7 +172,7 @@ function initContactForm() {
 
   if (!form) return;
 
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name    = form.name.value.trim();
@@ -206,16 +205,15 @@ function initContactForm() {
     } catch (err) {
       // ── Fallback to mailto ────────────────────────────────
       const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
 
-      const mailto = `mailto:dustriat@gmail.com?subject=${subject}&body=${body}`;
+      const mailto  = `mailto:dustriat@gmail.com?subject=${subject}&body=${body}`;
       window.location.href = mailto;
 
       showNote('Could not send automatically. Opening email client...', 'error');
       button.disabled = false;
     }
   });
-
 
   function showNote(msg, type) {
     formNote.textContent = msg;
