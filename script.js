@@ -54,7 +54,7 @@ function initReveal() {
   // extraClass 'reveal-wrap--sm' uses shorter translateY travel
   const revealTargets = [
     ['.contact-strip',          ''],
-    ['.section p',              ''],
+    ['.about__desc',            ''],
     ['.project-card',           ''],
     ['.cred-card',              ''],
     ['.career__stats',          ''],
@@ -162,6 +162,24 @@ function initActiveNav() {
   );
 
   sections.forEach(section => observer.observe(section));
+}
+
+// ── Active view on mobile ────────────────────────────────────
+function initActiveView() {
+  const isTouch = window.matchMedia('(hover: none)').matches;
+  if (!isTouch) return;
+
+  const targets = document.querySelectorAll('.btn--primary, .contact__link, .project-card, .cred-card, .career-item, .skill-card, .subpage-section, .subpage-step, .step-img-wrap, .subpage-sidebar__card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('in-view', entry.isIntersecting);
+    });
+  },
+  { threshold: 0.2, rootMargin: '-30% 0px -30% 0px' }
+);
+
+  targets.forEach(el => observer.observe(el));
 }
 
 // ── Contact form (with mailto fallback) ────────────────────────────
@@ -283,6 +301,7 @@ function initStepImageLightbox() {
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initActiveNav();
+  initActiveView();
   initContactForm();
   initSmoothScroll();
   initStepImageLightbox();
