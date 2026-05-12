@@ -375,8 +375,8 @@ em {
 .hero__line    { opacity: 0; display: block; }
 .hero__line--1 { animation: fadeUp 0.8s 0.35s forwards; }
 .hero__line--2 { animation: fadeUp 0.8s 0.5s forwards;  color: var(--color-primary-dark); font-style: italic; margin-left: clamp(0.15rem, 3vw, 3rem); }
-.hero__line--3 { animation: fadeUp 0.8s 0.65s forwards; text-transform: none; font-size: 0.7em; margin-left: clamp(0.3rem, 6vw, 6rem); }
-.hero__line--4 { animation: fadeUp 0.8s 0.8s forwards;  color: var(--color-primary-dark); font-style: italic; text-transform: none; font-size: 0.7em; margin-left: clamp(0.45rem, 9vw, 9rem); }
+.hero__line--3 { animation: fadeUp 0.8s 0.65s forwards; text-transform: none; font-size: 0.6em; margin-left: clamp(0.3rem, 6vw, 6rem); }
+.hero__line--4 { animation: fadeUp 0.8s 0.8s forwards;  color: var(--color-primary-dark); font-style: italic; text-transform: none; font-size: 0.6em; margin-left: clamp(0.45rem, 9vw, 9rem); }
 
 .hero__sub {
   font-size: 0.9rem;
@@ -1020,7 +1020,7 @@ em {
    ============================ */
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
 }
 
@@ -1058,7 +1058,7 @@ em {
 
 .skill-card p {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0 0.65rem 0.65rem 0.65rem;
   color: var(--color-ink-muted);
 }
@@ -1085,7 +1085,7 @@ em {
 
 .skill-row__label {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   display: block;
   margin-bottom: 0.15rem;
@@ -1099,30 +1099,6 @@ em {
   border-radius: 3px;
   transition: background 0.3s ease;
   background: rgba(255,255,255,0.08);
-}
-
-/* Design — yellow */
-.skill-row--design {
-  background: linear-gradient(135deg, #2a2400, #1e1b00);
-  border-color: rgba(255, 210, 40, 0.18);
-}
-
-.skill-row--design .skill-row__label { color: #DCD133; }
-
-.skill-row--design .skill-bar {
-  background: linear-gradient(90deg, #B8A800, var(--yellow));
-}
-
-/* Business — coral */
-.skill-row--bus {
-  background: linear-gradient(135deg, #260a09, #1e0707);
-  border-color: rgba(255, 102, 107, 0.18);
-}
-
-.skill-row--bus .skill-row__label { color: var(--coral); }
-
-.skill-row--bus .skill-bar {
-  background: linear-gradient(90deg, #C4454A, #FF66B8);
 }
 
 /* Analytics — blue */
@@ -1147,6 +1123,30 @@ em {
 
 .skill-row--tech .skill-bar {
   background: linear-gradient(90deg, #2f9E44, #6BFF66);
+}
+
+/* Design — yellow */
+.skill-row--design {
+  background: linear-gradient(135deg, #2a2400, #1e1b00);
+  border-color: rgba(255, 210, 40, 0.18);
+}
+
+.skill-row--design .skill-row__label { color: #DCD133; }
+
+.skill-row--design .skill-bar {
+  background: linear-gradient(90deg, #B8A800, var(--yellow));
+}
+
+/* Business — coral */
+.skill-row--bus {
+  background: linear-gradient(135deg, #260a09, #1e0707);
+  border-color: rgba(255, 102, 107, 0.18);
+}
+
+.skill-row--bus .skill-row__label { color: var(--coral); }
+
+.skill-row--bus .skill-bar {
+  background: linear-gradient(90deg, #C4454A, #FF66B8);
 }
 
 /* ============================
