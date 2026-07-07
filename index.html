@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MWKNGQVZ');</script>
+
   <title>Dustin Riat | Portfolio</title>
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -137,8 +145,10 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
             </div>
-            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-            <p class="form-note" id="formNote"></p>
+            <div class="form-group">
+              <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+              <p class="form-note" id="formNote"></p>
+            </div>
           </form>
         </div>
       </div>
@@ -166,7 +176,7 @@
           <span class="desc-accent">At the moment</span>I enjoy designing, creating, and improving products and business solutions. My approach blends curiosity, analysis, and practical action into a strong framework for decisions in a wide variety of markets. My goal is to support clients with the data, technology, and software designs they need to take a clear direction. I take apart what is feeling stuck and reassemble it for success.
         </p>
         <p class="about__desc">
-          <span class="desc-accent">Outside of work</span>most of my time is spent with my wife, Jenny, and our son Sully. We like to take things easy by getting outside for sports, playing video games, and relaxing at the end of our day. I still spend time working on projects like remodeling our basement and fixing vintage electronics. Recently, I restored a 70s Pachinko machine by re-designing and 3D-printing a replacement part that couldn’t be found anywhere. My son keeps me on my toes by constantly asking questions and coming up with imaginative ideas. I am grateful to share my passion for investigation and innovation with the people around me.
+          <span class="desc-accent">Outside of work</span>most of my time is spent with my wife, Jenny, and our son Sully. We like to take things easy by getting outside for sports, playing video games, and relaxing at the end of our day. I still spend time working on projects like remodeling our basement and fixing vintage electronics. Recently, I restored a 70s Pachinko machine by re-designing and 3D-printing a replacement part that couldn’t be found anywhere. My son keeps me on my toes by constantly asking questions and coming up with imaginative ideas. I'm grateful I can share my passion for exploration and innovation with my family and the people around me.
         </p>
       </div>
     </section>
@@ -205,11 +215,11 @@
             <p class="project-card__desc">Applies the full analytics workflow to a real-world dataset, from cleaning and SQL querying to visualization and insights. Focuses on turning raw data into clear, actionable conclusions.</p>
             <div class="meta">
               <span class="status">
-                <span class="status-dot status-dot--progress"></span>
-                In Progress | GitHub | Tableau
+                <span class="status-dot status-dot--active"></span>
+                Active | GitHub | Tableau
               </span>
               <span class="eta">
-                ETA April 2026
+                2026
               </span>
             </div>
           </a>
@@ -234,7 +244,7 @@
                 In Progress | GitHub | Codecademy
               </span>
               <span class="eta">
-                ETA May 2026
+                ETA 2026
               </span>
             </div>
           </a>
@@ -310,9 +320,9 @@
 
         <div class="creds__grid">
 
-          <div class="cred-card">
+          <a href="https://www.coursera.org/account/accomplishments/professional-cert/DCJC6890NYDZ" class="cred-card" target="_blank" rel="noopener" aria-label="Google Data Analytics Certificate">
             <div class="cred-card__img-wrap">
-              <img src="portfolio_images/Google_Data_Analytics.png" alt="Data Analytics Certificate" />
+              <img src="portfolio_images/Google Data Analytics Certificate.png" alt="Data Analytics Certificate" />
             </div>
             <div class="cred-card__body">
               <span class="cred-card__issuer">Google via Coursera</span>
@@ -321,16 +331,16 @@
             </div>
             <div class="meta meta__cred-card">
               <span class="status">
-                <span class="status-dot status-dot--progress"></span>
-                In Progress
+                <span class="status-dot status-dot--active"></span>
+                Completed
               </span>
-              <span class="eta">ETA April 2026</span>
+              <span class="eta">2026</span>
             </div>
-          </div>
+          </a>
 
           <div class="cred-card">
             <div class="cred-card__img-wrap">
-              <img src="portfolio_images/Codecademy_Data_Scientist.png" alt="Data Scientist Certificate" />
+              <img src="portfolio_images/Codecademy Data Scientist.png" alt="Data Scientist Certificate" />
             </div>
             <div class="cred-card__body">
               <span class="cred-card__issuer">Codecademy</span>
@@ -342,13 +352,13 @@
                 <span class="status-dot status-dot--progress"></span>
                 In Progress
               </span>
-              <span class="eta">ETA May 2026</span>
+              <span class="eta">ETA 2026</span>
             </div>
           </div>
 
-          <div class="cred-card solo">
+          <a href="https://registrar.ku.edu/cecredentialsr/validation" class="cred-card solo" target="_blank" rel="noopener" aria-label="University of Kansas Diploma">
             <div class="cred-card__img-wrap">
-              <img src="portfolio_images/University_of_Kansas_Diploma.png" alt="Bachelor Degree Diploma" />
+              <img src="portfolio_images/University of Kansas Diploma.png" alt="Bachelor Degree Diploma" />
             </div>
             <div class="cred-card__body">
               <span class="cred-card__issuer">University of Kansas</span>
@@ -362,7 +372,7 @@
               </span>
               <span class="eta">2014</span>
             </div>
-          </div>
+          </a>
 
         </div>
 
@@ -785,5 +795,9 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWKNGQVZ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </body>
 </html>
